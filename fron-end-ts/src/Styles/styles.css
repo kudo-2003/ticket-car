@@ -1,0 +1,101 @@
+.ticket-management {
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #512da8;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-info button {
+    background-color: white;
+    color: #512da8;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.content {
+    margin-top: 20px;
+}
+
+.search-section, .ticket-list {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.search-section h2, .ticket-list h2 {
+    margin-bottom: 15px;
+}
+
+.search-section input {
+    margin-right: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-section button {
+    padding: 8px 15px;
+    background-color: #512da8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.ticket-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ticket-list th, .ticket-list td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.ticket-list th {
+    background-color: #512da8;
+    color: white;
+}
+
+.ticket-list button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.ticket-list button:first-child {
+    background-color: #4caf50;
+    color: white;
+}
+
+.ticket-list button:last-child {
+    background-color: #f44336;
+    color: white;
+}

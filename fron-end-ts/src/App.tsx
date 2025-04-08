@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-// import AuthContainer from "./Auth/AuthContainer";
-// import TicketManagement from "./Components/TicketManagement";
-// import HelpIcon from "./Components/HelpIcon";
-// import ChatIcon from "./Components/ChatIcon"; // Import ChatIcon
+import AuthContainer from "./Auth/AuthContainer";
+import TicketManagement from "./Components/TicketManagement";
+import HelpIcon from "./Components/HelpIcon";
+import ChatIcon from "./Components/ChatIcon"; // Import ChatIcon
 import Home from "./Components/home/home";
 import "./Styles/App.css";
 

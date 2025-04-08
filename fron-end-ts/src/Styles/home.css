@@ -1,0 +1,203 @@
+/* Đảm bảo trang có thể cuộn */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+}
+
+/* Đảm bảo nội dung không bị cắt */
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Toàn bộ nội dung */
+.home {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.home::after {
+  content: "";
+  display: block;
+  height: 2000px; /* Thêm chiều cao giả để kiểm tra cuộn */
+}
+
+/* Header */
+.header {
+  background: url("../images/home/header-bg.jpg") no-repeat center center;
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+}
+
+.search-bar input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #0056b3;
+}
+
+/* Popular Destinations */
+.popular-destinations {
+  margin-top: 40px;
+}
+
+.popular-destinations h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.destinations {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.destination-card {
+  width: 200px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.destination-card img {
+  width: 100%;
+  height: 150px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.destination-card p {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Best Deals */
+.best-deals {
+  margin-top: 40px;
+}
+
+.best-deals h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.deals {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.deal-card {
+  width: 200px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.deal-card h3 {
+  color: #007bff;
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.deal-card button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.deal-card button:hover {
+  background-color: #0056b3;
+}
+
+/* Why Choose Us */
+.why-choose-us {
+  margin-top: 40px;
+}
+
+.why-choose-us h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.feature-card {
+  width: 200px;
+  text-align: center;
+  padding: 10px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card h3 {
+  font-size: 1.2rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Footer */
+.footer {
+  margin-top: 40px;
+  padding: 20px;
+  background: #f8f8f8;
+  color: #555;
+  font-size: 0.9rem;
+}

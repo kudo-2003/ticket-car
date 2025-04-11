@@ -1,0 +1,7 @@
+[
+    { "name": "Xe bus", "image": "/images/bus.jpg" },
+    { "name": "Máy bay", "image": "/images/plane.jpg" },
+    { "name": "Xe khách", "image": "/images/coach.jpg" },
+    { "name": "Xe taxi", "image": "/images/taxi.jpg" },
+    { "name": "Xe du lịch", "image": "/images/tourist.jpg" }
+  ]

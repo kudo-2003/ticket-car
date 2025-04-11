@@ -1,0 +1,84 @@
+/* Toàn bộ thanh Navbar */
+.navbar {
+  display: flex; /* Sử dụng flexbox để căn chỉnh các liên kết */
+  justify-content: space-between; /* Căn đều các phần tử trong navbar */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  background-color: #007bff; /* Màu nền của navbar */
+  padding: 10px 20px; /* Khoảng cách bên trong navbar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+}
+
+/* Liên kết trong Navbar */
+.navbar-link {
+  color: white;
+  text-decoration: none !important; /* Loại bỏ gạch dưới */
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: #0056b3;
+  display: inline-flex; /* Sử dụng inline-flex để căn chỉnh icon và chữ */
+  align-items: center; /* Căn chỉnh icon và chữ theo chiều dọc */
+  gap: 8px; /* Khoảng cách giữa icon và chữ */
+  transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu khi hover */
+}
+
+/* Hiệu ứng hover cho liên kết */
+.navbar-link:hover {
+  background-color: #003f8a;
+  text-decoration: none; /* Đảm bảo không có gạch dưới khi hover */
+}
+
+/* Logo trong Navbar */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Khoảng cách giữa logo và chữ */
+}
+
+.navbar-logo img {
+  width: 40px; /* Kích thước logo */
+  height: auto;
+  border-radius: 50%; /* Bo tròn logo nếu cần */
+}
+
+/* Dropdown menu (nếu có) */
+.navbar-dropdown {
+  position: relative;
+}
+
+.navbar-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #0056b3;
+  min-width: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.navbar-dropdown:hover .navbar-dropdown-content {
+  display: block;
+}
+
+.navbar-dropdown-content a {
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+.navbar-dropdown-content a:hover {
+  background-color: #003f8a;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Chuyển navbar thành cột trên màn hình nhỏ */
+    align-items: flex-start;
+  }
+
+  .navbar-link {
+    width: 100%; /* Liên kết chiếm toàn bộ chiều rộng */
+    text-align: left;
+  }
+}

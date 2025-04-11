@@ -1,0 +1,124 @@
+/* Toàn bộ trang thanh toán */
+.payment {
+  max-width: 600px; /* Giới hạn chiều rộng */
+  margin: 50px auto; /* Căn giữa trang */
+  padding: 20px;
+  background-color: #f9f9f9; /* Màu nền nhạt */
+  border-radius: 10px; /* Bo góc */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+  font-family: Arial, sans-serif;
+}
+
+/* Tiêu đề */
+.payment h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px; /* Kích thước chữ lớn hơn */
+  font-weight: bold;
+}
+
+/* Mô tả */
+.payment p {
+  text-align: center;
+  color: #555;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.5; /* Tăng khoảng cách giữa các dòng */
+}
+
+/* Phương thức thanh toán */
+.payment-methods {
+  max-height: 200px; /* Giới hạn chiều cao của danh sách */
+  overflow-y: auto; /* Thêm thanh cuộn dọc nếu nội dung vượt quá chiều cao */
+  display: flex;
+  flex-direction: column; /* Sắp xếp theo cột */
+  gap: 15px; /* Khoảng cách giữa các phương thức */
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd; /* Viền nhẹ cho danh sách */
+  border-radius: 5px; /* Bo góc */
+  background-color: #f9f9f9; /* Màu nền nhạt */
+}
+
+.payment-methods label {
+  display: flex;
+  align-items: center; /* Căn giữa icon và chữ */
+  gap: 10px; /* Khoảng cách giữa icon và chữ */
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid transparent; /* Viền mặc định trong suốt */
+  border-radius: 5px; /* Bo góc */
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* Hiệu ứng hover */
+}
+
+.payment-methods label:hover {
+  background-color: #f0f8ff; /* Màu nền khi hover */
+  border-color: #007bff; /* Đổi màu viền khi hover */
+}
+
+.payment-methods input[type="radio"] {
+  accent-color: #007bff; /* Màu của radio button */
+  transform: scale(1.2); /* Tăng kích thước radio button */
+}
+
+/* Icon hoặc hình ảnh của phương thức thanh toán */
+.payment-icon {
+  width: 30px; /* Kích thước icon */
+  height: auto;
+  border-radius: 5px; /* Bo góc icon */
+}
+
+/* Nút xác nhận */
+.payment button {
+  width: 100%; /* Chiều rộng nút */
+  padding: 10px 15px;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff; /* Màu nền */
+  border: none;
+  border-radius: 5px; /* Bo góc nút */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Hiệu ứng chuyển màu và nhấn nút */
+}
+
+.payment button:disabled {
+  background-color: #ccc; /* Màu nền khi nút bị vô hiệu hóa */
+  cursor: not-allowed; /* Con trỏ khi không thể bấm */
+}
+
+.payment button:hover:not(:disabled) {
+  background-color: #0056b3; /* Màu nền khi hover */
+  transform: scale(1.02); /* Hiệu ứng phóng to nhẹ khi hover */
+}
+
+.payment button:active:not(:disabled) {
+  transform: scale(0.98); /* Hiệu ứng thu nhỏ khi nhấn */
+}
+
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 768px) {
+  .payment {
+    padding: 15px;
+  }
+
+  .payment h2 {
+    font-size: 20px;
+  }
+
+  .payment p {
+    font-size: 14px;
+  }
+
+  .payment-methods label {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .payment button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}

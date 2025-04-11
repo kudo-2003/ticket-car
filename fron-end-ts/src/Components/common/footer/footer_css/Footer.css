@@ -1,0 +1,79 @@
+/* Toàn bộ Footer */
+.footer {
+    background-color: #333; /* Màu nền của footer */
+    color: white; /* Màu chữ */
+    padding: 20px; /* Khoảng cách bên trong footer */
+    text-align: center; /* Căn giữa nội dung */
+  }
+  
+  .footer-content {
+    display: flex; /* Sử dụng flexbox để căn chỉnh */
+    flex-direction: column; /* Căn theo cột */
+    align-items: center; /* Căn giữa các phần tử */
+    gap: 20px; /* Khoảng cách giữa các phần tử */
+  }
+  
+  /* Logo trong Footer */
+  .footer-logo img {
+    width: 100px; /* Kích thước logo */
+    height: auto;
+    border-radius: 50%; /* Bo tròn logo nếu cần */
+  }
+  
+  /* Thông tin công ty */
+  .footer-info p {
+    margin: 5px 0; /* Khoảng cách giữa các dòng */
+    font-size: 14px; /* Kích thước chữ */
+    display: flex;
+    align-items: center; /* Căn giữa icon và chữ */
+    gap: 8px; /* Khoảng cách giữa icon và chữ */
+  }
+  
+  /* Liên kết mạng xã hội */
+  .footer-social a {
+    color: white; /* Màu chữ */
+    text-decoration: none; /* Loại bỏ gạch dưới */
+    margin: 0 10px; /* Khoảng cách giữa các liên kết */
+    font-size: 16px; /* Kích thước chữ */
+    display: inline-flex; /* Căn chỉnh icon và chữ */
+    align-items: center; /* Căn giữa icon và chữ */
+    gap: 5px; /* Khoảng cách giữa icon và chữ */
+    transition: color 0.3s ease; /* Hiệu ứng chuyển màu khi hover */
+  }
+  
+  .footer-social a:hover {
+    color: #007bff; /* Màu khi hover */
+    text-decoration: underline; /* Gạch dưới khi hover */
+  }
+  
+  /* Liên kết bổ sung */
+  .footer-links {
+    margin-top: 10px; /* Khoảng cách phía trên */
+  }
+  
+  .footer-links a {
+    color: white; /* Màu chữ */
+    text-decoration: none; /* Loại bỏ gạch dưới */
+    margin: 0 10px; /* Khoảng cách giữa các liên kết */
+    font-size: 14px; /* Kích thước chữ */
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline; /* Gạch dưới khi hover */
+    color: #007bff; /* Màu khi hover */
+  }
+  
+  /* Responsive Footer */
+  @media (max-width: 768px) {
+    .footer-content {
+      gap: 15px; /* Giảm khoảng cách giữa các phần tử */
+    }
+  
+    .footer-social a {
+      font-size: 14px; /* Giảm kích thước chữ trên màn hình nhỏ */
+    }
+  
+    .footer-links a {
+      font-size: 12px; /* Giảm kích thước chữ trên màn hình nhỏ */
+    }
+  }

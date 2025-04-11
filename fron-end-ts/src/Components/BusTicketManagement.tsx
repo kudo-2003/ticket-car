@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "../Styles/BusTicketManagement.css";
 import { Ticket } from "../model/Ticket";
 import { defaultCar, defaultBuyer } from "../data/defaultValues";
 import { mockTickets } from "../data/mockTickets";

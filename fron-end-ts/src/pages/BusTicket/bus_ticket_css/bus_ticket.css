@@ -1,0 +1,113 @@
+/* Toàn bộ trang */
+.bus-ticket-page {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+  
+  /* Header */
+  .bus-ticket-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .bus-ticket-header h1 {
+    font-size: 28px;
+    color: #333;
+  }
+  
+  /* Thanh tìm kiếm */
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .search-bar input,
+  .search-bar button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .search-bar input:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  .search-bar button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .search-bar button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Danh sách vé */
+  .bus-ticket-list {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ticket-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .ticket-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .ticket-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .ticket-card p {
+    margin: 5px 0;
+    font-size: 16px;
+  }
+  
+  .ticket-card p strong {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .ticket-card button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .ticket-card button:hover {
+    background-color: #0056b3;
+  }
+  .ticket-image {
+    width: 100%; /* Chiều rộng hình ảnh sẽ vừa với thẻ vé */
+    height: auto; /* Tự động điều chỉnh chiều cao theo tỷ lệ */
+    border-radius: 8px; /* Bo góc hình ảnh */
+    margin-bottom: 10px; /* Khoảng cách giữa hình ảnh và nội dung */
+    object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+  }

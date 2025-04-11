@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "../Styles/BusTicketManagement.css";
 import { Ticket } from "../model/Ticket";
 import { mockTickets } from "../data/mockTickets";
 import TicketForm from "./BusTicketManagement/TicketForm";

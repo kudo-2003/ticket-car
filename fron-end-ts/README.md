@@ -25,9 +25,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
 
 
@@ -37,3 +35,45 @@ Quản Lý vé xe khách
 Quản lý vé xe du lịch
 Quản lý vé xe taxi
 Quản lý xe ôm.
+
+## Icon React
+npm i react-icons
+npm install @mui/icons-material @mui/material @emotion/styled @emotion/react
+
+fron-end-ts
+├── public
+│   ├── index.html
+│   ├── manifest.json
+│   ├── robots.txt
+├── src
+│   ├── App.tsx
+│   ├── index.tsx
+│   ├── react-app-env.d.ts
+│   ├── reportWebVitals.ts
+│   ├── setupTests.ts
+│   ├── components
+│   │   ├── Navbar.tsx  # Di chuyển Navbar vào đây
+│   │   ├── TicketComponent.tsx
+│   │   ├── common       # Nhóm các component dùng chung
+│   │   │   ├── Button.tsx
+│   │   │   ├── Modal.tsx
+│   ├── pages
+│   │   ├── Home.tsx
+│   │   ├── Auth
+│   │   │   ├── SignIn.tsx
+│   │   │   ├── SignUp.tsx
+│   │   ├── TicketManagement
+│   │   │   ├── BusTicketManagement.tsx
+│   │   │   ├── TaxiTicketManagement.tsx
+│   │   │   ├── TourTicketManagement.tsx
+│   │   ├── Payment
+│   │   │   ├── Payment.tsx
+│   ├── styles
+│   │   ├── global.css   # Để chứa các quy tắc chung
+│   │   ├── payment.css
+│   │   ├── home.css
+│   ├── routers
+│   │   ├── AppRouter.tsx  # Để định nghĩa routes
+├── package.json
+├── tsconfig.json
+└── README.md

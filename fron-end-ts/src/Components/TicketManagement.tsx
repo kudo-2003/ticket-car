@@ -9,7 +9,6 @@ import CoachTicketManagement from "./CoachTicketManagement";
 import TourTicketManagement from "./TourTicketManagement";
 import TaxiTicketManagement from "./TaxiTicketManagement";
 import MotorbikeTicketManagement from "./MotorbikeTicketManagement";
-import "../Styles/TicketManagement.css";
 
 const TicketManagement: React.FC = () => {
     const [activeComponent, setActiveComponent] = useState<string>("");

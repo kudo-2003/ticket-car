@@ -1,7 +1,6 @@
 import React from "react";
-import "./footer_css/Footer.css"; // Import CSS for styling
+import "./footer_css/Footer.css";
 
-// Define props type
 interface FooterProps {
   year: number;
   companyName: string;
@@ -10,41 +9,43 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = ({ year, companyName }) => {
   return (
     <footer className="footer">
-      <div className="footer-content">
-        {/* Logo */}
-        <div className="footer-logo">
-          <img src="/logo.png" alt={`${companyName} Logo`} />
+      {/* Newsletter section */}
+      <section className="newsletter-card">
+        <div className="newsletter-content">
+          <h2>📬 Đăng ký nhận bản tin</h2>
+          <p>Ưu đãi độc quyền & mẹo du lịch gửi đến bạn mỗi tuần!</p>
+          <div className="newsletter-form">
+            <input type="email" placeholder="Nhập email của bạn..." />
+            <button>Đăng ký</button>
+          </div>
+        </div>
+      </section>
+
+      {/* Main footer content */}
+      <div className="footer-grid">
+        <div className="footer-brand">
+          <h3>{companyName}</h3>
+          <p>© {year} - Đặt vé xe khách nhanh chóng & tiện lợi.</p>
         </div>
 
-        {/* Thông tin công ty */}
-        <div className="footer-info">
-          <p>© {year} {companyName} - Đặt vé xe khách nhanh chóng & tiện lợi.</p>
-          <p>
-            <i className="fas fa-map-marker-alt"></i> Địa chỉ: 123 Đường ABC, Quận XYZ, Thành phố Hồ Chí Minh
-          </p>
-          <p>
-            <i className="fas fa-envelope"></i> Email: support@{companyName.toLowerCase().replace(/\s+/g, "")}.com
-          </p>
-          <p>
-            <i className="fas fa-phone"></i> Hotline: 1900 123 456
-          </p>
+        <div className="footer-contact">
+          <h4>Liên hệ</h4>
+          <p>📍 123 Đường ABC, Quận XYZ, TP.HCM</p>
+          <p>📧 support@{companyName.toLowerCase().replace(/\s+/g, "")}.com</p>
+          <p>📞 1900 123 456</p>
         </div>
 
-        {/* Liên kết mạng xã hội */}
         <div className="footer-social">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-facebook"></i> Facebook
-          </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-twitter"></i> Twitter
-          </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-instagram"></i> Instagram
-          </a>
+          <h4>Kết nối</h4>
+          <div className="social-icons">
+            <a href="#"><i className="fab fa-facebook-f"></i></a>
+            <a href="#"><i className="fab fa-twitter"></i></a>
+            <a href="#"><i className="fab fa-instagram"></i></a>
+          </div>
         </div>
 
-        {/* Liên kết bổ sung */}
         <div className="footer-links">
+          <h4>Thông tin</h4>
           <a href="/privacy-policy">Chính sách bảo mật</a>
           <a href="/terms-of-service">Điều khoản sử dụng</a>
           <a href="/faq">Câu hỏi thường gặp</a>

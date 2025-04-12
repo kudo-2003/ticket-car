@@ -1,79 +1,103 @@
-/* Toàn bộ Footer */
 .footer {
-    background-color: #333; /* Màu nền của footer */
-    color: white; /* Màu chữ */
-    padding: 20px; /* Khoảng cách bên trong footer */
-    text-align: center; /* Căn giữa nội dung */
-  }
-  
-  .footer-content {
-    display: flex; /* Sử dụng flexbox để căn chỉnh */
-    flex-direction: column; /* Căn theo cột */
-    align-items: center; /* Căn giữa các phần tử */
-    gap: 20px; /* Khoảng cách giữa các phần tử */
-  }
-  
-  /* Logo trong Footer */
-  .footer-logo img {
-    width: 100px; /* Kích thước logo */
-    height: auto;
-    border-radius: 50%; /* Bo tròn logo nếu cần */
-  }
-  
-  /* Thông tin công ty */
-  .footer-info p {
-    margin: 5px 0; /* Khoảng cách giữa các dòng */
-    font-size: 14px; /* Kích thước chữ */
-    display: flex;
-    align-items: center; /* Căn giữa icon và chữ */
-    gap: 8px; /* Khoảng cách giữa icon và chữ */
-  }
-  
-  /* Liên kết mạng xã hội */
-  .footer-social a {
-    color: white; /* Màu chữ */
-    text-decoration: none; /* Loại bỏ gạch dưới */
-    margin: 0 10px; /* Khoảng cách giữa các liên kết */
-    font-size: 16px; /* Kích thước chữ */
-    display: inline-flex; /* Căn chỉnh icon và chữ */
-    align-items: center; /* Căn giữa icon và chữ */
-    gap: 5px; /* Khoảng cách giữa icon và chữ */
-    transition: color 0.3s ease; /* Hiệu ứng chuyển màu khi hover */
-  }
-  
-  .footer-social a:hover {
-    color: #007bff; /* Màu khi hover */
-    text-decoration: underline; /* Gạch dưới khi hover */
-  }
-  
-  /* Liên kết bổ sung */
-  .footer-links {
-    margin-top: 10px; /* Khoảng cách phía trên */
-  }
-  
-  .footer-links a {
-    color: white; /* Màu chữ */
-    text-decoration: none; /* Loại bỏ gạch dưới */
-    margin: 0 10px; /* Khoảng cách giữa các liên kết */
-    font-size: 14px; /* Kích thước chữ */
-  }
-  
-  .footer-links a:hover {
-    text-decoration: underline; /* Gạch dưới khi hover */
-    color: #007bff; /* Màu khi hover */
-  }
-  
-  /* Responsive Footer */
-  @media (max-width: 768px) {
-    .footer-content {
-      gap: 15px; /* Giảm khoảng cách giữa các phần tử */
-    }
-  
-    .footer-social a {
-      font-size: 14px; /* Giảm kích thước chữ trên màn hình nhỏ */
-    }
-  
-    .footer-links a {
-      font-size: 12px; /* Giảm kích thước chữ trên màn hình nhỏ */
-    }
-  }
+  background-color: #f9f9f9;
+  padding: 60px 30px 30px;
+  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.newsletter-card {
+  background: linear-gradient(135deg, #002aff, #03228f);
+  color: white;
+  padding: 40px 20px;
+  border-radius: 16px;
+  text-align: center;
+  margin-bottom: 50px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.newsletter-card h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.newsletter-card p {
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.newsletter-form input {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  width: 280px;
+}
+
+.newsletter-form button {
+  padding: 12px 20px;
+  background-color: #ff914d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.newsletter-form button:hover {
+  background-color: #e76a24;
+}
+
+/* Footer content grid */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.footer-brand h3 {
+  font-size: 22px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.footer-contact h4,
+.footer-social h4,
+.footer-links h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.footer-links a,
+.footer-contact p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 8px;
+  display: block;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #000;
+}
+
+.social-icons a {
+  margin-right: 12px;
+  font-size: 18px;
+  color: #0083b0;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff914d;
+}

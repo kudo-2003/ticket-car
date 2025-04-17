@@ -8,6 +8,7 @@ interface SignUpProps {
 export function SignUp({ onAuthSuccess }: SignUpProps) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -15,6 +16,8 @@ export function SignUp({ onAuthSuccess }: SignUpProps) {
     console.log("Sign-up with", { name, email, password });
     onAuthSuccess();
   };
+
+  
 
   return (
     <form onSubmit={handleSubmit}>
@@ -31,6 +34,13 @@ export function SignUp({ onAuthSuccess }: SignUpProps) {
         placeholder="Name"
         value={name}
         onChange={(e) => setName(e.target.value)}
+        required
+      />
+      <input
+        type="text"
+        placeholder="Phone Number"
+        value={phone}
+        onChange={(e) => setPhone(e.target.value)}
         required
       />
       <input

@@ -6,6 +6,7 @@ import TicketManagement from "../Components/TicketManagement";
 import AuthContainer from "../pages/Auth/AuthContainer";
 import Payment from "../pages/payment/Payment";
 
+
 const AppRouter: React.FC = () => {
   return (
     <Router>

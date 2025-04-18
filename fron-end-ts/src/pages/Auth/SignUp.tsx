@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./auth_css/SignIn_SignUp.css"
+import { useNavigate } from "react-router-dom";
 
 interface SignUpProps {
   onAuthSuccess: () => void;
@@ -11,11 +12,41 @@ export function SignUp({ onAuthSuccess }: SignUpProps) {
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const navigate = useNavigate(); 
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Sign-up with", { name, email, password });
-    onAuthSuccess();
+  
+    try {
+      const response = await fetch("http://127.0.0.1:8080/auth/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: name,
+          numberphone: phone,
+          email: email,
+          password: password,
+        }),
+      });
+  
+      const data = await response.json();
+  
+      if (response.ok) {
+        alert("login successful!"); // Thông báo thành công
+        onAuthSuccess(); // có thể chuyển sang login hoặc home
+      
+      } else {
+        console.error("Signup failed:", data.message);
+        alert(`Signup failed: ${data.message}`);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("There was a problem with the signup request.");
+    }
   };
+  
 
   
 

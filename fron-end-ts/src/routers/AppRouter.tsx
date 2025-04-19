@@ -5,6 +5,8 @@ import BusTicket from "../pages/BusTicket/BusTicket";
 import TicketManagement from "../Components/TicketManagement";
 import AuthContainer from "../pages/Auth/AuthContainer";
 import Payment from "../pages/payment/Payment";
+import { ForgotPassword } from "../pages/Auth/ForgotPassword";
+import { ResetPassword } from "../pages/Auth/ResetPassword";
 
 
 const AppRouter: React.FC = () => {
@@ -25,6 +27,10 @@ const AppRouter: React.FC = () => {
         
         {/* Trang thanh toán */}
         <Route path="/payment" element={<Payment />} />
+
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+
+        <Route path="/reset-password" element={<ResetPassword />} />
       </Routes>
     </Router>
   );

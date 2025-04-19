@@ -12,13 +12,11 @@ export function SignUp({ onAuthSuccess }: SignUpProps) {
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
 
-  const navigate = useNavigate(); 
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
   
     try {
-      const response = await fetch("http://127.0.0.1:8080/auth/signup", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/auth/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -34,8 +32,9 @@ export function SignUp({ onAuthSuccess }: SignUpProps) {
       const data = await response.json();
   
       if (response.ok) {
-        alert("login successful!"); // Thông báo thành công
+        alert("signup successfully!"); // Thông báo thành công
         onAuthSuccess(); // có thể chuyển sang login hoặc home
+        console.log("Signup successful:", data);
       
       } else {
         console.error("Signup failed:", data.message);

@@ -11,38 +11,36 @@ export function SignIn({ onAuthSuccess }: SignInProps) {
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate(); 
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://127.0.0.1:8080/auth/signin", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/auth/signin`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-      
-          email: email,
-          password: password,
-        }),
+        body: JSON.stringify({ email, password }),
       });
-  
+
       const data = await response.json();
-  
-      if (response.ok) {
-        console.log("Signin successful:", data);
-        alert("Signin successful!"); // Thông báo thành công
-        onAuthSuccess(); // có thể chuyển sang login hoặc home
-        navigate("/");
-      } else {
-        console.error("Signin failed:", data.message);
-        alert(`Signin failed: ${data.message}`);
+      
+      if (!response.ok || data.statusCode >= 400) {
+        console.error("Signin failed:", data.message || data.error);
+        alert(`Signin failed: ${data.message || "Unknown error"}`);
+        return;
       }
+
+      console.log("Signin successful:", data);
+      alert("Signin successful!");
+      onAuthSuccess();
+      navigate("/");
     } catch (error) {
       console.error("Error:", error);
       alert("There was a problem with the Signin request.");
     }
   };
+  
+  
 
   return (
     <form onSubmit={handleSubmit}>
@@ -68,7 +66,9 @@ export function SignIn({ onAuthSuccess }: SignInProps) {
         onChange={(e) => setPassword(e.target.value)}
         required
       />
-      <a href="#">Forget Your Password?</a>
+      <a href="#" onClick={() => navigate("/forgot-password")}>
+        Forget Your Password?
+      </a>
       <button type="submit">Sign In</button>
     </form>
   );
